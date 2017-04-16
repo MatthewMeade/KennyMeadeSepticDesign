@@ -1,6 +1,11 @@
 body{
-  max-width: 1024px;
+  width: 80%;
+  max-width: 1336px;
   margin: 0 auto;
+}
+
+header{
+  z-index: 10;
 }
 
 header h1{
@@ -10,12 +15,51 @@ header h1{
   text-align: center;
 
   margin: 10px 0;
+
+}
+
+
+header.mini h1 span{
+  display: inline;
+}
+
+header.mini h1 #septicDesign, header.mini h1 #kennyMeade{
+  font-size: 150%;
+}
+
+header.mini #topBar{
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+header.mini{
+  position: fixed;
+  width: 100%;
+  background: white;
+  top: 0;
+  left: 0;
+
+}
+
+#headSpacer{
+  height: 0;
+  width: 100vw;
+  background: white;
+}
+
+#headSpacer.enabled{
+  height: 175px;
 }
 
 header h1 span{
   display: block;
-
 }
+
+header.mini #septicDesign::before, header.mini #septicDesign::after{
+  content: "";
+}
+
+
 
 #kennyMeade{
   font-size: 200%;
@@ -28,6 +72,11 @@ header h1 span{
   font-size: 120%;
   margin-top: -10px;
 }
+
+#septicDesign::before, #septicDesign::after{
+  content: "—";
+}
+
 
 #topBar{
   border-top: 2px dotted #BBB;
@@ -70,6 +119,11 @@ header h1 span{
 
 }
 
+
+
+
+
+
 #topBar a, #topBar a:visited{
   color: inherit;
   text-decoration: none;
@@ -91,7 +145,6 @@ section{
 
   text-align: center;
   margin-bottom: 20px;
-  border: 2px solid purple;
 }
 
 .pSection h2{
@@ -121,13 +174,11 @@ section{
 
 .pSection .bg{
   position: absolute;
-  width: 1500px;
+  width: 100%;
   height: 800px;
-  left: -20%;
+  left: 0;
   top: 0px;
 
-  background-size: 100%;
-  background-position: bottom;
 
   opacity: 75;
   z-index: -1;
@@ -135,10 +186,12 @@ section{
 
 #welcomeText .bg{
   background-image: url("images/forest.jpg");
+  background-position: bottom;
 }
 
 #applications .bg{
   background-image: url("images/table.jpg");
+  background-size: cover;
 }
 
 #applications{
