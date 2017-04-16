@@ -1,26 +1,31 @@
-var elems = document.querySelectorAll(".pSection .bg");
-var off = 175;
-
-var marker = document.getElementById("offMarker");
+var images = document.querySelectorAll(".pSection .bg");
+var header = document.querySelector("header");
+var spacer = document.querySelector("#headSpacer");
+var pOff = 350;
 
 window.addEventListener("scroll", update);
-update();
 
+update();
 function update(){
 
-  marker.style.top = off + 'px';
+  var pos = window.pageYOffset;
 
-  elems.forEach(function(elem, i){
+
+  if(pos > 20){
+    header.className = "mini";
+    spacer.className = "enabled";
+  }else{
+    header.className = "";
+    spacer.className = "";
+  }
+
+
+  images.forEach(function(elem, i){
     var top = elem.parentElement.getBoundingClientRect().top;
     var bottom = elem.parentElement.getBoundingClientRect().bottom;
-    var imgPos = elem.style.top;
-    var pos = window.pageYOffset
 
-
-    // console.log(`Top: ${top} Off: ${pos + off} Img: ${imgPos}`);
-    if(top < off && bottom > off){
-      elem.style.top = -1 * ((pos + off) - (top + pos)) + 'px';
-
+    if(top < pOff){
+      elem.style.top = -1 * ((pos + pOff) - (top + pos)) + 'px';
     }
   });
 }
