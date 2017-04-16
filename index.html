@@ -2,71 +2,90 @@
 <html>
   <head>
     <title>Kenny Meade Septic Design</title>
-    
+
     <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One" rel="stylesheet">
     <link href="styles.css" rel="stylesheet" type="text/css"/>
   </head>
   <body>
     <header>
         <h1><span id="kennyMeade">Kenny Meade</span><span id="septicDesign">&mdash; Septic Design &mdash;</span></h1>
-        
+
         <div id="topBar">
           <span>
-            Phone: <a href="phone:000-0000">555-1234</a>
+            Phone: <a href="phone:000-0000">709-698-2437</a>
           </span>
-          
+
           <span>
             Servicing Southwest Newfoundland
           </span>
-          
+
           <span>
-            Email: <a href="mailto:example@temp.com">email@temp.com</a>
+            Email: <a href="mailto:KennyDMeade@Gmail.com">KennyDMeade@Gmail.com</a>
           </span>
         </div>
-        
+
         <div id="contactButton">Contact Me</div>
     </header>
-    
+
+
+    <!--
     <section id="topImages">
       <img src="images/blueprint.jpg" />
       <img src="images/cabin.jpg" />
       <img src="images/blueprint.jpg" />
     </section>
-    
-    <section id="welcomeText">
+  -->
+
+    <section id="welcomeText" class="pSection">
+      <span class="bg"></span>
       <h2>Over 15 years of septic design experience</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa.</p>
     </section>
-    
-    
-    <section id="details">
-      <figure>
-        <figcaption>Lorem Ipsum</figcaption>
-        <img src="#" />
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq </p>
-      </figure>
-      
-      <figure>
-        <figcaption>Lorem Ipsum</figcaption>
-        <img src="#" />
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq </p>
-      </figure>
-      
-      <figure>
-        <figcaption>Lorem Ipsum</figcaption>
-        <img src="#" />
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq </p>
-      </figure>
-    </section>
-    
-    <section id="applications">
+
+    <aside id="contact">
+      <form>
+          <div>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" placeholder="example@domain.com"/>
+          </div>
+
+          <div>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" placeholder="Your name"/>
+          </div>
+
+          <div>
+              <label for="phone">Phone:</label>
+              <input type="phone" id="phone" name="phone" placeholder="555-1234"/>
+          </div>
+
+          <fieldset>
+            <label for="message">Message</label>
+            <textarea name="message" id="message" placeholder="Enter your message here..."></textarea>
+          </fieldset>
+      </form>
+    </aside>
+
+
+    <section id="applications" class="pSection">
+      <span class="bg"></span>
+      <h2>Application Download Links</h2>
       <ul>
         <li><a href="#">Water and Sewage</a></li>
         <li><a href="#">Protected Roads</a></li>
         <li><a href="#">Municipal Approval</a></li>
       </ul>
     </section>
-    
+
+    <span id="offMarker" style="
+      position: fixed;
+      top: 200px;
+      width: 100%;
+      height: 1px;
+      background: red;
+    "></span>
+
+
     <section id="faq">
       <h2>Frequently Asked Questions</h2>
 
@@ -208,31 +227,7 @@
                </li>
            </ul>
     </section>
-    
-    
-    <aside id="contact">
-      <form>
-          <div>
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" placeholder="example@domain.com"/>
-          </div>
-          
-          <div>
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" placeholder="Your name"/>
-          </div>
-          
-          <div>
-              <label for="phone">Phone:</label>
-              <input type="phone" id="phone" name="phone" placeholder="555-1234"/>
-          </div>
-          
-          <fieldset>
-            <label for="message">Message</label>
-            <textarea name="message" id="message" placeholder="Enter your message here..."></textarea>
-          </fieldset> 
-      </form>
-    </aside>
-    
+
+    <script src="scripts/scroll.js"></script>
   </body>
 </html>

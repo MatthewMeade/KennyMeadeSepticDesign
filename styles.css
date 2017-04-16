@@ -1,14 +1,14 @@
 body{
   max-width: 1024px;
-  margin: 0 auto;  
+  margin: 0 auto;
 }
 
 header h1{
   font-family: 'Pathway Gothic One', sans-serif;
   text-transform: uppercase;
-  
+
   text-align: center;
-  
+
   margin: 10px 0;
 }
 
@@ -32,14 +32,14 @@ header h1 span{
 #topBar{
   border-top: 2px dotted #BBB;
   border-bottom: 2px dotted #BBB;
-  
+
   font-family: 'Pathway Gothic One', sans-serif;
   letter-spacing: 2px;
-  
+
   padding: 2px;
-  
+
   font-size: 120%;
-  
+
   color: #666;
 
 }
@@ -59,7 +59,7 @@ header h1 span{
 #topBar span:first-of-type{
   float: left;
   text-align: right;
-  
+
   border-right: 1px solid gray;
 }
 
@@ -81,29 +81,30 @@ header h1 span{
 
 #contactButton{
   width: 138px;
-  height: 70px;
-  
+  height: 45px;
+
   background: #27B;
-  
+
   padding-top: 30px;
   padding-left: 2px;
-  
+
   position: fixed;
   top: -25px;
   right: 100px;
-  
+
   text-align: center;
   color: white;
-  line-height: 50px;
+  line-height: 40px;
   font-size: 25px;
-  
+
   font-family: 'Pathway Gothic One', sans-serif;
   letter-spacing: 4px;
   font-weight: bold;
-  
+
   /*overflow: hidden;*/
-  
+
   transition: top .5s;
+  z-index: 10;
 
 }
 
@@ -111,31 +112,165 @@ header h1 span{
   top: -10px;
 }
 
-
+/*
 #contactButton:after{
   content: "";
-  
+
   position: absolute;
-  
+
   left: 0;
   bottom: 0;
   width: 0;
   height: 0;
-  
+
   border-bottom: 15px solid white;
   border-left: 70px solid transparent;
   border-right: 70px solid transparent;
-  
-}
+
+  z-index: -100;
+
+}*/
 
 section{
   clear: both;
   margin: 10px 0;
 }
 
+.pSection{
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+
+  text-align: center;
+  margin-bottom: 20px;
+  border: 2px solid purple;
+}
+
+.pSection h2{
+  background: rgba(0,0,0,0.2);
+  color: white;
+  text-shadow: black 0 0 20px;
+  line-height: 50px;
+  font-size: 200%;
+
+  font-family: 'Pathway Gothic One', sans-serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.pSection p{
+  background: rgba(0,0,0,0.12);
+  color: white;
+  text-shadow: black 0 0 20px;
+
+  height: 150px;
+  font-size: 175%;
+  padding: 20px 5px 0 5px;
+  /*font-family: 'Pathway Gothic One', sans-serif;*/
+
+
+}
+
+.pSection .bg{
+  position: absolute;
+  width: 1500px;
+  height: 800px;
+  left: -20%;
+  top: 0px;
+
+  background-size: 100%;
+  background-position: bottom;
+
+  opacity: 75;
+  z-index: -1;
+}
+
+#welcomeText .bg{
+  background-image: url("images/forest.jpg");
+}
+
+#applications .bg{
+  background-image: url("images/table.jpg");
+}
+
+#applications{
+  height: 200px;
+}
+
+#applications ul{
+  list-style-type: none;
+  list-style-position: outside;
+}
+
+#applications a{
+  color: #FFF;
+  text-decoration: none;
+
+  font-size: 200%;
+
+  font-family: 'Pathway Gothic One', sans-serif;
+
+
+}
+
+#applications h2{
+  background: rgba(0,0,0,0.12);
+  font-size: 200%;
+  margin: 20px 0;
+  font-family: 'Pathway Gothic One', sans-serif;
+  text-align: center;
+  color: white;
+  font-weight: normal;
+  padding-bottom: 2px;
+
+  border-top: 2px dotted gray;
+  border-bottom: 2px dotted gray;
+
+}
+
+#applications ul{
+  padding: 0;
+
+}
+
+#applications li{
+  width: 33.33%;
+  line-height: 40px;
+
+  text-align: center;
+
+  float: left;
+  color: #555;
+
+  background-color: rgba(0,0,0,0.2);
+  transition: background-color .2s;
+
+}
+
+#applications li:hover{
+  background-color: rgba(0,0,0,0.4);
+}
+
+
+
+
+
+
+/*
+
 #topImages img{
   width: 25%;
   margin-left: 6.25%;
   float: left;
   display: block;
+
+  filter: drop-shadow(0 10px 15px #666);
 }
+
+
+#topImages:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+*/
