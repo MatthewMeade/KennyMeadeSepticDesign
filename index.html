@@ -5,6 +5,8 @@
 
     <meta charset="utf-8" />
 
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One" rel="stylesheet">
     <link href="styles.css" rel="stylesheet" type="text/css"/>
   </head>
@@ -29,15 +31,6 @@
 
     <div id="headSpacer" ></div>
 
-
-    <!--
-    <section id="topImages">
-      <img src="images/blueprint.jpg" />
-      <img src="images/cabin.jpg" />
-      <img src="images/blueprint.jpg" />
-    </section>
-  -->
-
     <section id="welcomeText" class="pSection">
       <span class="bg"></span>
       <h2>Over 15 years of septic design experience</h2>
@@ -45,26 +38,40 @@
     </section>
 
     <aside id="contact">
-      <form>
-          <div>
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" placeholder="example@domain.com"/>
+
+      <h2>Contact Me</h2>
+      <h2 class="hidden" id="sentMessage">Message Sent</h2>
+      <form method="post" id="contactForm">
+           <div id="contactInfo">
+
+               <h3>Your Information</h3>
+
+               <label for="email">Email:</label>
+               <input type="email" id="email" name="_replyto" placeholder="example@domain.com" tabindex="1" required="required"/>
+
+               <br />
+
+               <label for="name">Name:</label>
+               <input type="text" id="name" name="name" placeholder="Your Name" tabindex="2" required="required"/>
+
+               <br />
+
+               <label for="name">Phone:</label>
+               <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" tabindex="3"/>
+
+
+               <input type="submit" value="Submit" id="submitButton" tabindex="5"/>
+           </div>
+
+          <div id="contactMessage">
+              <label for="message">Message: </label>
+              <textarea name="message" id="message" placeholder="Enter your message here..." tabindex="4" required="required"></textarea>
           </div>
 
-          <div>
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" placeholder="Your name"/>
-          </div>
+          <input type="hidden" id="subject" name="_subject" value="New message from " />
+          <input type="hidden" name="_format" value="plain" />
 
-          <div>
-              <label for="phone">Phone:</label>
-              <input type="phone" id="phone" name="phone" placeholder="555-1234"/>
-          </div>
 
-          <fieldset>
-            <label for="message">Message</label>
-            <textarea name="message" id="message" placeholder="Enter your message here..."></textarea>
-          </fieldset>
       </form>
     </aside>
 
@@ -223,6 +230,7 @@
            </ul>
     </section>
 
+    <script src="scripts/form.js"></script>
     <script src="scripts/scroll.js"></script>
   </body>
 </html>

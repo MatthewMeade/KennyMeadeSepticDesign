@@ -2,6 +2,7 @@ body{
   width: 80%;
   max-width: 1336px;
   margin: 0 auto;
+
 }
 
 header{
@@ -182,6 +183,8 @@ section{
 
   opacity: 75;
   z-index: -1;
+
+  /*transition: top .25s linear;*/
 }
 
 #welcomeText .bg{
@@ -252,26 +255,156 @@ section{
   background-color: rgba(0,0,0,0.4);
 }
 
-
-
-
-
-
-/*
-
-#topImages img{
-  width: 25%;
-  margin-left: 6.25%;
-  float: left;
-  display: block;
-
-  filter: drop-shadow(0 10px 15px #666);
+#contact {
+  font-family: 'Pathway Gothic One', sans-serif;
 }
 
-
-#topImages:after{
+#contact:after{
   content: "";
-  display: table;
+  display: block;
   clear: both;
 }
-*/
+
+
+#contact h2{
+
+  line-height: 50px;
+  font-size: 300%;
+  text-align: center;
+  color: #444;
+
+  text-transform: uppercase;
+
+  border-top: 2px dotted gray;
+  border-bottom: 2px dotted gray;
+
+  transition: transform .5s;
+
+  transform-origin: 0 50%;
+
+}
+
+#sentMessage{
+  position: relative;
+  top: -95px;
+
+  transform-origin: 100% 0 !important;
+}
+
+#contact h2.hidden{
+  transform: rotateY(90deg);
+}
+
+#contact form{
+  clear: both;
+  margin-top: -120px;
+
+  /*background: radial-gradient(ellipse closest-side, rgba(75,75,75,.9), rgba(25,25,25,9));*/
+  /*color: white;*/
+
+  padding: 0 10px;
+}
+
+#contact form:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#contact form div{
+  width: 50%;
+  height: 300px;
+
+}
+
+#contactInfo{
+  float: left;
+}
+
+#contactMessage{
+  float: right;
+}
+
+#contactInfo label{
+  font-size: 200%;
+  width: 65px;
+  display: inline-block;
+}
+
+#contactInfo input{
+  height: 25px;
+  margin-bottom: 15px;
+  position: relative;
+  top: -5px;
+
+  width: calc(100% - 75px);
+  text-indent: 5px;
+}
+
+#contactInfo h3, #contactMessage label{
+  font-size: 250%;
+  text-align: center;
+  font-weight: normal;
+  display: block;
+  margin: 0;
+
+  line-height: 50px;
+}
+
+
+#message{
+  display: block;
+  width: calc(100% - 50px);
+  margin: 5px auto;
+  resize: none;
+
+  height: 200px;
+
+  padding: 5px;
+
+}
+
+#submitButton{
+  display: block;
+  margin: 0 auto;
+
+  border: 2px #444 solid;
+  background: none;
+  box-shadow: 0 4px 1px 1px #BBB;
+
+  border-radius: 15px;
+
+  color: #444;
+
+  font-family: 'Pathway Gothic One', sans-serif;
+  letter-spacing: 2px;
+
+  font-size: 200%;
+  height: 40px !important;
+  line-height: 30px;
+  padding: 0;
+
+
+  transition: box-shadow .2s, top .2s, max-width .2s;
+
+  outline: none;
+  position: relative;
+  top: 0;
+
+  max-width: 300px;
+
+}
+
+#submitButton:focus, #submitButton:hover{
+  top: 1px;
+  box-shadow: 0 1px 1px 1px #BBB;
+  max-width: 290px;
+}
+
+#submitButton[value="Sending..."]{
+  pointer-events: none;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+}
