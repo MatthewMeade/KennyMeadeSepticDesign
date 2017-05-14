@@ -1,7 +1,7 @@
 var images = document.querySelectorAll(".pSection .bg");
 var header = document.querySelector("header");
 var spacer = document.querySelector("#headSpacer");
-var pOff = 350;
+var pOff = 400;
 
 window.addEventListener("scroll", update);
 
