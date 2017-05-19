@@ -11,7 +11,7 @@ var faqWindow = document.querySelector("#faq");
 
            var parent = e.srcElement.parentNode;
            parent.className = parent.className === "active" ? "" : "active";
-           
+
        }
     });
 })();

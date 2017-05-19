@@ -23,6 +23,39 @@ header h1{
 
 }
 
+@media screen and (max-width: 1200px) {
+  header:not(.mini) #topBar span{
+    width: calc(33% - 29px) !important;
+  }
+
+  header:not(.mini) #topBar span:nth-child(2){
+    width: 33% !important;
+    /*background: red;*/
+  }
+
+  header:not(.mini) #topBar{
+    width: 95vw;
+    /*border-left: 1px solid red;*/
+    /*border-right: 1px solid red;*/
+    margin-left: -10%;
+  }
+
+
+}
+
+@media screen and (max-width: 1000px) {
+  header.mini #topBar span{
+    width: calc(33% - 29px) !important;
+  }
+
+  header.mini #topBar span:nth-child(2){
+    width: 33% !important;
+  }
+  header #topBar{
+    display: none;
+  }
+}
+
 header.mini h1{
   animation-name: header;
   animation-duration: 0.5s;
@@ -40,7 +73,7 @@ header.mini h1 #septicDesign, header.mini h1 #kennyMeade{
 }
 
 header.mini #topBar{
-  max-width: 1024px;
+  max-width: 95vw;
   margin: 0 auto;
 }
 
@@ -176,6 +209,9 @@ section{
 
   text-align: center;
   margin-bottom: 20px;
+
+  border: 1px solid #666;
+
 }
 
 .pSection h2{
@@ -206,21 +242,53 @@ section{
 .pSection .bg{
   position: absolute;
   width: 100%;
-  height: 800px;
+  height: 1900px;
   left: 0;
   top: 0px;
+
+  background-repeat: repeat-y;
 
 
   opacity: 75;
   z-index: -1;
 
-  /*transition: top .25s linear;*/
+  transition: top .05s linear;
+  filter: brightness(60%) grayscale(50%);
+
 }
+
+@media screen and (max-width: 900px) {
+  .pSection h2{
+    font-size: 160%;
+    letter-spacing: 2px;
+  }
+
+  .pSection p{
+    font-size: 150%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  body{
+    width: 100%;
+    max-width: 100% !important;
+  }
+}
+
 
 #welcomeText .bg{
   background-image: url("images/forest.jpg");
-  background-position: bottom;
+  background-position: top;
 }
+
+#cost .bg{
+  background-image: url("images/money.jpg");
+  background-position: top;
+}
+
+/*#cost *{*/
+  /*color: black !important;*/
+/*}*/
 
 #applications .bg{
   background-image: url("images/table.jpg");
@@ -257,8 +325,8 @@ section{
   font-weight: normal;
   padding-bottom: 2px;
 
-  border-top: 2px dotted gray;
-  border-bottom: 2px dotted gray;
+  /*border-top: 2px dotted gray;*/
+  /*border-bottom: 2px dotted gray;*/
 
 }
 
@@ -454,31 +522,36 @@ input:-webkit-autofill {
   transition: background .5s;
 
   pointer-events: none;
+
+
 }
 
 #faqBg.enabled{
   background: rgba(0,0,0,0.9);
   pointer-events: all;
+
 }
 
 #faq{
   width: 70vw;
   height: 90vh;
-  
+
   position: fixed;
   top: 105vh;
   left: 15vw;
 
-  background: white;
 
   z-index: 21;
 
   padding: 0 10px;
-  transition: top .5s;
+  transition: top .5s, opacity .5s;
+
+  opacity: 0;
 }
 
 #faq.enabled{
-  top: 5vh;
+  top: 2vh;
+  opacity: 1;
 }
 
 #faq h2{
@@ -489,10 +562,10 @@ input:-webkit-autofill {
 
   text-transform: uppercase;
 
-  border-top: 2px dotted gray;
-  border-bottom: 2px dotted gray;
 
-  margin: 15px 0 0 0;
+  margin: 15px 0 10px 0;
+
+  color: white;
 }
 
 #faq ul{
@@ -500,8 +573,12 @@ input:-webkit-autofill {
 
   height: calc(80vh - 50px);
   margin: 0;
+
+  background: white;
+
 }
 
+/*
 #faq ul::-webkit-scrollbar-track
 {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -521,10 +598,17 @@ input:-webkit-autofill {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
   background-color: #666;
 }
+*/
 
 #faq ul{
   padding: 0;
   letter-spacing: 1px;
+
+  box-shadow: 3px 3px 5px #AAA;
+
+  border: 5px solid #FFF;
+  border-radius: 15px;
+
 }
 
 #faq ul li:last-of-type{
@@ -539,6 +623,8 @@ input:-webkit-autofill {
   margin: 0;
 
   line-height: 45px;
+
+  padding: 0 5px;
 }
 
 
@@ -588,9 +674,13 @@ input:-webkit-autofill {
   text-align: center;
   letter-spacing: 1px;
   font-size: 150%;
-  margin: 10px auto;
 
   width: 75px;
+
+  position: fixed;
+  top: 0px;
+  right: 20px;
+  color: white;
 
 }
 
@@ -615,21 +705,20 @@ footer h2{
 
   /*background: red;*/
 
-  text-align: center;
+  text-align: right;
 
   font-size: 250%;
   /*margin: 0 5% 0 0;*/
-  margin: 0;
-  margin-right: -1em;
+  margin: 0 1em;
 
   line-height: 100px;
   float: left;
-  width: 50%;
+  width: 30%;
 }
 
 footer h3{
   float: left;
-  text-align: left;
+  text-align: center;
 
   /*background: green;*/
 
@@ -659,4 +748,44 @@ footer a{
 
 footer a:hover{
   font-style: italic;
+}
+
+@media screen and (max-width: 1150px) {
+  footer h2{
+    font-size: 175%;
+  }
+
+  footer h3{
+    font-size: 100%;
+  }
+}
+
+@media screen and (min-width: 800px){
+  .smallFooter{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  footer h2:not(.smallFooter), footer h3{
+    display: none;
+  }
+
+  .smallFooter{
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  .smallFooter a{
+    margin: 0 10px;
+  }
+
+  .smallFooter, .smallFooter a{
+    font-size: calc(3vw + 2px);
+    font-weight: bold;
+  }
 }

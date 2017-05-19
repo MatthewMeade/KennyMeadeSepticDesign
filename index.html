@@ -1,248 +1,276 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Kenny Meade Septic Design</title>
 
-    <meta charset="utf-8" />
+<head>
+  <title>Kenny Meade Septic Design</title>
 
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
 
-    <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet" type="text/css"/>
-  </head>
-  <body>
-    <header>
-        <h1><span id="kennyMeade">Kenny Meade</span> <span id="septicDesign">Septic Design</span></h1>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-        <div id="topBar">
-          <span>
-            Phone: <a href="phone:000-0000">709-698-2437</a>
+  <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <p id="resDisplay" style="
+    position: fixed;
+    top: -10px;
+    left: 0;
+    padding: 5px;
+    z-index: 100;
+    font-family: monospace;
+    ">0x0</p>
+
+  <script>
+    var disp = document.querySelector("#resDisplay");
+    disp.innerHTML = `${window.innerWidth} x ${window.innerHeight}`
+
+    window.addEventListener('resize', function(e) {
+      disp.innerHTML = `${window.innerWidth} x ${window.innerHeight}`
+    });
+  </script>
+
+  <header>
+    <h1><span id="kennyMeade">Kenny Meade</span> <span id="septicDesign">Septic Design</span></h1>
+
+    <div id="topBar">
+      <span>
+            Phone Number: <a href="phone:000-0000">709-698-2437</a>
           </span>
 
-          <span>
+      <span>
             Servicing Southwest Newfoundland
           </span>
 
-          <span>
+      <span>
             Email: <a href="mailto:KennyDMeade@Gmail.com">KennyDMeade@Gmail.com</a>
           </span>
-        </div>
-    </header>
+    </div>
+  </header>
 
-    <div id="headSpacer" ></div>
+  <div id="headSpacer"></div>
 
-    <section id="welcomeText" class="pSection">
-      <span class="bg"></span>
-      <h2>Over 15 years of septic design experience</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa.</p>
-    </section>
+  <section id="welcomeText" class="pSection">
+    <span class="bg"></span>
+    <h2>Over 15 years of septic design experience</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa.</p>
+  </section>
 
-    <aside id="contact">
-
-      <h2>Contact Me</h2>
-      <h2 class="hidden" id="sentMessage">Message Sent</h2>
-      <form method="post" id="contactForm">
-           <div id="contactInfo">
-
-               <h3>Your Information</h3>
-
-               <label for="email">Email:</label>
-               <input type="email" id="email" name="_replyto" placeholder="example@domain.com" tabindex="1" required="required"/>
-
-               <br />
-
-               <label for="name">Name:</label>
-               <input type="text" id="name" name="name" placeholder="Your Name" tabindex="2" required="required"/>
-
-               <br />
-
-               <label for="name">Phone:</label>
-               <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" tabindex="3"/>
+  <section id="cost" class="pSection">
+    <span class="bg"></span>
+    <h2>Septic Designs Starting at $300</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa.</p>
+  </section>
 
 
-               <input type="submit" value="Submit" id="submitButton" tabindex="5"/>
-               <button id="faqButton" form="" onclick="toggleWindow(true)">Read FAQ</button>
+  <aside id="contact">
 
-           </div>
+    <h2>Contact Me</h2>
+    <h2 class="hidden" id="sentMessage">Message Sent</h2>
+    <form method="post" id="contactForm">
+      <div id="contactInfo">
 
-          <div id="contactMessage">
-              <label for="message">Message: </label>
-              <textarea name="message" id="message" placeholder="Enter your message here..." tabindex="4" required="required"></textarea>
-          </div>
+        <h3>Your Information</h3>
 
-          <input type="hidden" id="subject" name="_subject" value="New message from " />
-          <input type="hidden" name="_format" value="plain" />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="_replyto" placeholder="example@domain.com" tabindex="1" required="required" />
 
+        <br />
 
-      </form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" tabindex="2" required="required" />
 
-    </aside>
+        <br />
 
-
-    <section id="applications" class="pSection">
-      <span class="bg"></span>
-      <h2>Application Download Links</h2>
-      <ul>
-        <li><a href="#">Water and Sewage</a></li>
-        <li><a href="#">Protected Roads</a></li>
-        <li><a href="#">Municipal Approval</a></li>
-      </ul>
-    </section>
+        <label for="name">Phone:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" tabindex="3" />
 
 
-    <div id="faqBg"></div>
-    <section id="faq">
-      <h2>Frequently Asked Questions</h2>
+        <input type="submit" value="Submit" id="submitButton" tabindex="5" />
+        <button id="faqButton" form="" onclick="toggleWindow(true)">Read FAQ</button>
 
-           <ul>
-               <li>
-                   <h3>What is a septic system?</h3>
-                   <p class="active">
-                       A septic system is generally made up of two parts:
-                       <span class="indent">A Septic Tank <br />A Leaching Field</span>
-                       Your septic system stores and treats sewage / grey water from you home before it is released back into the local water table
-                   </p>
-               </li>
+      </div>
 
-               <li>
-                   <h3>What is the cost of a new septic system?</h3>
-                   <p>Approximately $5 000 - $7 000 for a basic system, add an additional $5 000 or more if imported fill is required.</p>
-               </li>
+      <div id="contactMessage">
+        <label for="message">Message: </label>
+        <textarea name="message" id="message" placeholder="Enter your message here..." tabindex="4" required="required"></textarea>
+      </div>
 
-               <li>
-                   <h3>How much land is required for a septic system?</h3>
-                   <p>
-                       Semi service lot (Water source is off site):
-                       <span class="indent">0.14 hectares or about 15 000 square feet</span>
+      <input type="hidden" id="subject" name="_subject" value="New message from " />
+      <input type="hidden" name="_format" value="plain" />
 
-                       Full service lot (Water source is on the lot)
-                       <span class="indent">0.2 hectares or about 20 000 square feet</span>
-                   </p>
-               </li>
 
-               <li>
-                   <h3>What size septic thank is required?</h3>
-                   <p>A minimum of 500 gallons is required by standard, but only 600 gallons tanks are available locally. If the dwelling has over 3 bedrooms a larger tank will be needed. </p>
-               </li>
+    </form>
 
-               <li>
-                   <h3>What is the separation distance between my well and septic system?</h3>
-                   <p>The septic tank and absorption field must have a minimum separation distance of:
-                       <span class="indent">100 feet from a natural water source or dug well<br /> 50 feet from a drilled well</span>
-                   </p>
-               </li>
+  </aside>
 
-               <li>
-                   <h3>Can an ocean outfall be used in place of an absorption field?</h3>
-                   <p>Ocean outfalls can be used if they are common in the area and soil conditions are unsuitable for an absorption field</p>
-               </li>
 
-               <li>
-                   <h3>Can an ocean outfall be shared?</h3>
-                   <p>An ocean outfall can be shared provided you have written consent and your own septic tank per CSA standards</p>
-               </li>
+  <section id="applications" class="pSection">
+    <span class="bg"></span>
+    <h2>Application Download Links</h2>
+    <ul>
+      <li><a href="#">Water and Sewage</a></li>
+      <li><a href="#">Protected Roads</a></li>
+      <li><a href="#">Municipal Approval</a></li>
+    </ul>
+  </section>
 
-               <li>
-                   <h3>What is the difference between the white and green pipe?</h3>
-                   <p>The green pipe is road grade, it is used where there may be a load on the surface</p>
-               </li>
 
-               <li>
-                   <h3>What is involved in the free site visit?</h3>
-                   <p>The site visit is a primary evaluation of the property. At this point we determine if the property is suitable for a septic field and determine the
-                       optimal location for the septic field</p>
-               </li>
+  <div id="faqBg"></div>
+  <section id="faq">
+    <h2>Frequently Asked Questions</h2>
 
-               <li>
-                   <h3>What does it cost for the design process?</h3>
-                   <p>I charge $300 for testing and design, the client is responsible for the cost of the backhoe or excavator</p>
-               </li>
+    <ul>
+      <li>
+        <h3>What is a septic system?</h3>
+        <p class="active">
+          A septic system is generally made up of two parts:
+          <span class="indent">A Septic Tank <br />A Leaching Field</span> Your septic system stores and treats sewage / grey water from you home before it is released back into the local water table
+        </p>
+      </li>
 
-               <li>
-                   <h3>What information is required during the site visit?</h3>
-                   <p>The following information is required for the site visit:
-                       <span class="indent">
+      <li>
+        <h3>What is the cost of a new septic system?</h3>
+        <p>Approximately $5 000 - $7 000 for a basic system, add an additional $5 000 or more if imported fill is required.</p>
+      </li>
+
+      <li>
+        <h3>How much land is required for a septic system?</h3>
+        <p>
+          Semi service lot (Water source is off site):
+          <span class="indent">0.14 hectares or about 15 000 square feet</span> Full service lot (Water source is on the lot)
+          <span class="indent">0.2 hectares or about 20 000 square feet</span>
+        </p>
+      </li>
+
+      <li>
+        <h3>What size septic thank is required?</h3>
+        <p>A minimum of 500 gallons is required by standard, but only 600 gallons tanks are available locally. If the dwelling has over 3 bedrooms a larger tank will be needed. </p>
+      </li>
+
+      <li>
+        <h3>What is the separation distance between my well and septic system?</h3>
+        <p>The septic tank and absorption field must have a minimum separation distance of:
+          <span class="indent">100 feet from a natural water source or dug well<br /> 50 feet from a drilled well</span>
+        </p>
+      </li>
+
+      <li>
+        <h3>Can an ocean outfall be used in place of an absorption field?</h3>
+        <p>Ocean outfalls can be used if they are common in the area and soil conditions are unsuitable for an absorption field</p>
+      </li>
+
+      <li>
+        <h3>Can an ocean outfall be shared?</h3>
+        <p>An ocean outfall can be shared provided you have written consent and your own septic tank per CSA standards</p>
+      </li>
+
+      <li>
+        <h3>What is the difference between the white and green pipe?</h3>
+        <p>The green pipe is road grade, it is used where there may be a load on the surface</p>
+      </li>
+
+      <li>
+        <h3>What is involved in the free site visit?</h3>
+        <p>The site visit is a primary evaluation of the property. At this point we determine if the property is suitable for a septic field and determine the optimal location for the septic field</p>
+      </li>
+
+      <li>
+        <h3>What does it cost for the design process?</h3>
+        <p>I charge $300 for testing and design, the client is responsible for the cost of the backhoe or excavator</p>
+      </li>
+
+      <li>
+        <h3>What information is required during the site visit?</h3>
+        <p>The following information is required for the site visit:
+          <span class="indent">
                            Completed application to develop land <br />
                            Floor plan of the dwelling <br />
                            Property Dimensions
                        </span>
-                   </p>
-               </li>
+        </p>
+      </li>
 
-               <li>
-                   <h3>When is a new septic system design required?</h3>
-                   <p>A new septic system design is required when:
-                       <span class="indent">
+      <li>
+        <h3>When is a new septic system design required?</h3>
+        <p>A new septic system design is required when:
+          <span class="indent">
                            Applying for Crown land <br />
                            Applying to develop land <br />
                            Requested by Service NL <br />
                            Requested by lenders or lawyers <br />
                            Replacing a failing system
                        </span>
-                   </p>
-               </li>
+        </p>
+      </li>
 
-               <li>
-                   <h3>What can I do if I have a failing system but don't meet the requirements for a new system?</h3>
-                   <p>We will work with Service NL to design a replacement system</p>
-               </li>
+      <li>
+        <h3>What can I do if I have a failing system but don't meet the requirements for a new system?</h3>
+        <p>We will work with Service NL to design a replacement system</p>
+      </li>
 
-               <li>
-                   <h3>How long do I have to install the system once the design process is completed?</h3>
-                   <p>Once the design is completed, you have two years to install it with a possible extension of an additional year (unless otherwise instructed by Service NL)</p>
-               </li>
+      <li>
+        <h3>How long do I have to install the system once the design process is completed?</h3>
+        <p>Once the design is completed, you have two years to install it with a possible extension of an additional year (unless otherwise instructed by Service NL)</p>
+      </li>
 
-               <li>
-                   <h3>When installing my septic system, where do I call for an inspection?</h3>
-                   <p>Call Service NL five working days before the install. The septic system can not be back filled until the inspection is completed. Service NL can be reached at:
-                       <a href="phone:643-8651">643-8651</a> or  <a href="phone:643-8652">643-8652</a>
-                   </p>
-               </li>
+      <li>
+        <h3>When installing my septic system, where do I call for an inspection?</h3>
+        <p>Call Service NL five working days before the install. The septic system can not be back filled until the inspection is completed. Service NL can be reached at:
+          <a href="phone:643-8651">643-8651</a> or <a href="phone:643-8652">643-8652</a>
+        </p>
+      </li>
 
-               <li>
-                   <h3>When can I apply for an Electrical permit?</h3>
-                   <p>An Electrical permit can be obtained once the sewer design is approved and an approval certificate is issued to the home owner</p>
-               </li>
+      <li>
+        <h3>When can I apply for an Electrical permit?</h3>
+        <p>An Electrical permit can be obtained once the sewer design is approved and an approval certificate is issued to the home owner</p>
+      </li>
 
-               <li>
-                   <h3>Who is responsible to arrange a backhoe or excavator for the soil tests?</h3>
-                   <p>The applicant is responsible for the cost of rental and arranging a contractor to be on site during the time of soil testing <br />
-                       I will provide a list of contractors / equipment owners who would be available for hire
-                   </p>
-               </li>
+      <li>
+        <h3>Who is responsible to arrange a backhoe or excavator for the soil tests?</h3>
+        <p>The applicant is responsible for the cost of rental and arranging a contractor to be on site during the time of soil testing <br /> I will provide a list of contractors / equipment owners who would be available for hire
+        </p>
+      </li>
 
-               <li>
-                   <h3>Who submits the preliminary application to develop land?</h3>
-                   <p>These can be filled out by the applicant and submitted to Service NL by the applicant. For a fee, I can act as your agent
-                       and submit the completed form along with all required documents to Service NL.
-                   </p>
-               </li>
+      <li>
+        <h3>Who submits the preliminary application to develop land?</h3>
+        <p>These can be filled out by the applicant and submitted to Service NL by the applicant. For a fee, I can act as your agent and submit the completed form along with all required documents to Service NL.
+        </p>
+      </li>
 
-               <li>
-                   <h3>How long does it take to have a sewer design completed and approved?</h3>
-                   <p>After the site visit and testing of soil, approval is usually granted within two weeks</p>
-               </li>
+      <li>
+        <h3>How long does it take to have a sewer design completed and approved?</h3>
+        <p>After the site visit and testing of soil, approval is usually granted within two weeks</p>
+      </li>
 
-               <li>
-                   <h3>What is protected roads?</h3>
-                   <p>Protected Roads is a 400 meter easement from the Trans Canada Highway. If you are within this area a:
-                       <span class="indent"><a href="#">Preliminary Application to Develop Land</a></span>
-                       Must be completed and submitted to Service NL.
-                   </p>
-               </li>
+      <li>
+        <h3>What is protected roads?</h3>
+        <p>Protected Roads is a 400 meter easement from the Trans Canada Highway. If you are within this area a:
+          <span class="indent"><a href="#">Preliminary Application to Develop Land</a></span> Must be completed and submitted to Service NL.
+        </p>
+      </li>
 
-           </ul>
-        <p id="faqClose">Exit FAQ</p>
-    </section>
+    </ul>
+    <p id="faqClose">Exit FAQ</p>
+  </section>
 
-    <footer>
-        <h2>Kenny Meade Septic Design</h2>
-        <h3><a href="mailto:KennyMeade@gmail.com">KennyMeade@gmail.com</a></h3>
-        <h3><a href="phone:698-2437">709-698-2437</a></h3>
-    </footer>
+  <footer>
+    <h2>Kenny Meade Septic Design</h2>
+    <h3><a href="mailto:KennyMeade@gmail.com">KennyMeade@gmail.com</a></h3>
+    <h3><a href="phone:698-2437">709-698-2437</a></h3>
 
-    <script src="scripts/faq.js"></script>
-    <script src="scripts/form.js"></script>
-    <script src="scripts/scroll.js"></script>
-  </body>
+    <h2 class="smallFooter">Kenny Meade Septic Design
+            <a href="mailto:KennyMeade@gmail.com">KennyMeade@gmail.com</a>
+            <a href="phone:698-2437">709-698-2437</a>
+        </h2>
+  </footer>
+
+  <script src="scripts/faq.js"></script>
+  <script src="scripts/form.js"></script>
+  <script src="scripts/scroll.js"></script>
+</body>
+
+
 </html>
