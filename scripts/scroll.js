@@ -1,6 +1,7 @@
 var images = document.querySelectorAll(".pSection .bg");
 var header = document.querySelector("header");
 var spacer = document.querySelector("#headSpacer");
+var background = document.querySelector("#pageBackground");
 var pOff = 400;
 
 window.addEventListener("scroll", update);
@@ -20,4 +21,6 @@ function update(){
       elem.style.top = -1 * ((pos + pOff) - (top + pos)) + 'px';
     }
   });
+
+  background.style.top = (pos / 1.5) - 300 + "px";
 }
