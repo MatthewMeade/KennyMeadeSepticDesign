@@ -1,6 +1,6 @@
 body{
   position: relative;
-
+  margin: 0;
   overflow-x: hidden;
 }
 
@@ -10,22 +10,20 @@ body{
   position: absolute;
   visibility: visible;
 
-  top: 10vw;
-  left: -10vw;
+  /*top: 10vw;
+  left: -10vw;*/
   width: 125vw;
   height: 75%;
 
   z-index: -10;
 
-  opacity: 0.3;
+  opacity: 0.25;
 
   transform: rotateZ(5deg);
 
-  /*overflow: hidden;*/
-  background-image: url("images/planOne.png"), url("images/planOne.png"), url("images/planOne.png");
+  background-image: url("../images/planOne.png"), url("../images/planOne.png"), url("../images/planOne.png");
   background-repeat: no-repeat;
-
   background-position: top left, right, bottom left;
 
-  transform: top .5s ease;
+  /*transform: top .5s ease;*/
 }
