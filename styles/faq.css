@@ -1,0 +1,160 @@
+
+
+#faqBg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba(0,0,0,0);
+
+  z-index: 20;
+
+  transition: background .5s;
+
+  pointer-events: none;
+
+
+}
+
+#faqBg.enabled{
+  background: rgba(0,0,0,0.9);
+  pointer-events: all;
+
+}
+
+#faq{
+  width: 70vw;
+  height: 90vh;
+
+  position: fixed;
+  top: 105vh;
+  left: 15vw;
+
+
+  z-index: 21;
+
+  padding: 0 10px;
+  transition: top .5s, opacity .5s;
+
+  opacity: 0;
+}
+
+#faq.enabled{
+  top: 2vh;
+  opacity: 1;
+}
+
+#faq h2{
+  line-height: 50px;
+  font-size: 300%;
+  text-align: center;
+  color: #444;
+
+  text-transform: uppercase;
+
+
+  margin: 15px 0 10px 0;
+
+  color: white;
+}
+
+#faq ul{
+  overflow-y: scroll;
+
+  height: calc(80vh - 50px);
+  margin: 0;
+
+  background: white;
+
+}
+
+
+#faq ul{
+  padding: 0;
+  letter-spacing: 1px;
+
+  box-shadow: 3px 3px 5px #AAA;
+
+  border: 5px solid #FFF;
+  border-radius: 15px;
+
+}
+
+#faq ul li:last-of-type{
+  margin-bottom: 20px;
+}
+
+
+#faq ul li h3 {
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 175%;
+  font-weight: normal;
+  margin: 0;
+
+  line-height: 45px;
+
+  padding: 0 5px;
+}
+
+
+
+#faq ul li h3:hover{
+  font-style: italic;
+  background: #EEE;
+}
+
+#faq ul li:nth-child(2n+0) h3{
+  background: #DDD;
+}
+
+
+#faq ul li p{
+  font-size: 120%;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+
+  background: #EEE;
+
+  transition: margin .5s, max-height .5s, padding .5s;
+}
+
+#faq ul li.active p{
+  max-height: 125px;
+  margin: 2px 0 10px 2px;
+  padding: 5px;
+}
+
+#faq .indent{
+  padding-left: 0.5em;
+  display: block;
+  margin: 0 4px;
+
+  border-left: 1px dotted #444;
+}
+
+#faqButton{
+  width: 100%;
+}
+
+#faqClose{
+  font-family: 'Pathway Gothic One', sans-serif;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 150%;
+
+  width: 75px;
+
+  position: fixed;
+  top: 0px;
+  right: 20px;
+  color: white;
+
+}
+
+#faqClose:hover{
+  font-style: italic;
+}

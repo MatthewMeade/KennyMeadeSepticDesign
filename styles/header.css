@@ -1,0 +1,209 @@
+
+
+#largeHeader{
+  z-index: 10;
+
+  background: white;
+
+  position: relative;
+
+
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+
+  top: 0;
+
+  transition: top 0.5s linear;
+}
+
+#largeHeader.disabled{
+  top: -200px;
+}
+
+
+#largeHeader h1{
+  font-family: 'Pathway Gothic One', sans-serif;
+  text-transform: uppercase;
+
+  text-align: center;
+
+  margin: 0;
+
+  position: relative;
+
+}
+
+@media screen and (max-width: 1200px) {
+  #topBar span{
+    width: calc(33% - 29px) !important;
+  }
+
+  #topBar span:nth-child(2){
+    width: 33% !important;
+    /*background: red;*/
+  }
+
+  #topBar{
+    width: 95vw;
+    /*border-left: 1px solid red;*/
+    /*border-right: 1px solid red;*/
+    margin-left: -10%;
+  }
+
+
+}
+
+
+
+header h1 span{
+  display: block;
+}
+
+
+
+
+
+#largeHeader .kennyMeade{
+  font-size: 200%;
+}
+
+#largeHeader .septicDesign{
+  font-weight: normal;
+  color: #aaa;
+
+  font-size: 120%;
+  margin-top: -10px;
+}
+
+#largeHeader .septicDesign::before, #largeHeader .septicDesign::after{
+  content: "—";
+}
+
+
+#topBar{
+  border-top: 2px dotted #BBB;
+  border-bottom: 2px dotted #BBB;
+
+  font-family: 'Pathway Gothic One', sans-serif;
+  letter-spacing: 2px;
+
+  padding: 2px;
+
+  font-size: 120%;
+
+  color: #666;
+
+}
+
+#topBar span{
+  display: inline-block;
+  width: calc(30% - 29px);
+  padding: 0 14px;
+  text-align: center;
+}
+
+#topBar span:nth-child(2){
+  width: 40%;
+  padding: 0;
+}
+
+#topBar span:first-of-type{
+  float: left;
+  text-align: right;
+
+  border-right: 1px solid gray;
+}
+
+#topBar span:last-of-type{
+  float: right;
+  text-align: left;
+  border-left: 1px solid gray;
+
+}
+
+
+
+
+
+
+#topBar a, #topBar a:visited{
+  color: inherit;
+  text-decoration: none;
+}
+
+#topBar a:hover{
+  font-style: italic;
+}
+
+
+#smallHeader{
+  position: fixed;
+  top: -200px;
+
+
+  font-family: 'Pathway Gothic One', sans-serif;
+  background: white;
+  padding: 5px;
+
+  z-index: 10;
+
+  width: 100%;
+
+  height: 40px;
+
+  transition: top 0.5s linear;
+}
+
+#smallHeader.enabled{
+  top: 0;
+}
+
+
+#smallHeader h1{
+  margin: 0 45px 0 60px;
+
+  line-height: 40px;
+  display: inline;
+
+}
+
+#smallHeader .septicDesign{
+  color: #aaa;
+}
+
+#smallHeader span{
+  display: inline;
+  margin: 0;
+}
+
+
+
+#smallHeader h2{
+  display: inline;
+  line-height: 40px;
+
+  font-weight: normal;
+  font-family: 'Pathway Gothic One', sans-serif;
+
+
+}
+
+#smallHeader i{
+  line-height: 50px;
+
+  font-size: 25px;
+
+  margin-left: 100px;
+}
+
+
+#smallHeader a{
+  color: #444;
+  line-height: 40px;
+  text-decoration: none;
+
+  font-size: 20px;
+
+  /*margin-right: 60px;*/
+}

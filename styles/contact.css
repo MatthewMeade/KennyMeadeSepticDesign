@@ -1,0 +1,169 @@
+
+#contact {
+  font-family: 'Pathway Gothic One', sans-serif;
+
+  background: rgba(65, 65, 65, 1);
+
+  padding: 10px 0;
+
+  width: 95%;
+  margin: 50px auto;
+
+}
+
+#contact:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+#contact h2{
+
+  line-height: 50px;
+  font-size: 300%;
+  text-align: center;
+  color: #FFF;
+
+  text-transform: uppercase;
+
+  /*border-top: 2px dotted gray;
+  border-bottom: 2px dotted gray;*/
+
+  transition: transform .5s;
+
+  transform-origin: 0 50%;
+
+  width: 90%;
+
+  margin: 0 auto;
+
+}
+
+#sentMessage{
+  position: relative;
+  top: -50px;
+
+  transform-origin: 100% 0 !important;
+}
+
+#contact h2.hidden{
+  transform: rotateY(90deg);
+}
+
+#contact form{
+  clear: both;
+
+  width: 75%;
+  margin: 0 auto;
+  margin-top: -60px;
+
+  padding: 0 10px;
+}
+
+#contact form:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#contact form div{
+  width: 50%;
+  height: 330px;
+
+}
+
+#contactInfo{
+  float: left;
+}
+
+#contactMessage{
+  float: right;
+}
+
+#contactInfo label{
+  font-size: 200%;
+  width: 65px;
+  display: inline-block;
+  color: white;
+}
+
+#contactInfo input{
+  height: 25px;
+  margin-bottom: 15px;
+  position: relative;
+  top: -5px;
+
+  width: calc(90% - 75px);
+  text-indent: 5px;
+}
+
+#contactInfo h3, #contactMessage label{
+  font-size: 250%;
+  text-align: center;
+  font-weight: normal;
+  display: block;
+  margin: 0;
+
+  line-height: 50px;
+
+  color: white;
+}
+
+
+#message{
+  display: block;
+  width: calc(100% - 50px);
+  margin: 5px auto;
+  resize: none;
+
+  height: 250px;
+
+  padding: 5px;
+
+}
+
+#submitButton, #faqButton{
+  display: block;
+  margin: 0 auto;
+
+  border: 2px #444 solid;
+  background: white;
+  box-shadow: 0 4px 1px 1px #BBB;
+
+  border-radius: 5px;
+
+  color: #444;
+
+  font-family: 'Pathway Gothic One', sans-serif;
+  letter-spacing: 2px;
+
+  font-size: 200%;
+  height: 40px !important;
+  line-height: 30px;
+  padding: 0;
+
+
+  transition: box-shadow .2s, top .2s, max-width .2s;
+
+  outline: none;
+  position: relative;
+  top: 0;
+
+  max-width: 300px;
+
+}
+
+#submitButton:focus, #submitButton:hover, #faqButton:focus, #faqButton:hover{
+  top: 1px;
+  box-shadow: 0 1px 1px 1px #BBB;
+  max-width: 290px;
+}
+
+#submitButton[value="Sending..."]{
+  pointer-events: none;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+}
