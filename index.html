@@ -20,29 +20,7 @@
 
 <body>
 
-  <p id="resDisplay" style="
-    position: fixed;
-    top: -10px;
-    left: 0;
-    padding: 5px;
-    z-index: 100;
-    font-family: monospace;
-    ">0x0</p>
-
-  <script>
-    var disp = document.querySelector("#resDisplay");
-    disp.innerHTML = `${window.innerWidth} x ${window.innerHeight}`
-
-    window.addEventListener('resize', function(e) {
-      disp.innerHTML = `${window.innerWidth} x ${window.innerHeight}`
-    });
-  </script>
-
   <div id="pageBackground">
-    <!-- <img src="images/planOne.png" />
-    <img src="images/planOne.png" />
-    <img src="images/planOne.png" />
-    <img src="images/planOne.png" /> -->
   </div>
 
   <header id="largeHeader">
@@ -301,6 +279,7 @@
   <script src="scripts/faq.js"></script>
   <script src="scripts/form.js"></script>
   <script src="scripts/scroll.js"></script>
+  <script src="scripts/size.js"></script>
 </body>
 
 
