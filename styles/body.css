@@ -2,16 +2,14 @@ body{
   position: relative;
   margin: 0;
   overflow-x: hidden;
+  font-family: 'Pathway Gothic One', sans-serif;
 }
-
 
 
 #pageBackground{
   position: absolute;
   visibility: visible;
 
-  /*top: 10vw;
-  left: -10vw;*/
   width: 125vw;
   height: 75%;
 
@@ -25,5 +23,7 @@ body{
   background-repeat: no-repeat;
   background-position: top left, right, bottom left;
 
-  /*transform: top .5s ease;*/
+  transform: top .5s ease;
+
+  overflow: hidden;
 }

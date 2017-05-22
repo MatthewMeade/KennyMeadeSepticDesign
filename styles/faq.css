@@ -1,5 +1,3 @@
-
-
 #faqBg{
   position: fixed;
   top: 0;
@@ -11,17 +9,14 @@
 
   z-index: 20;
 
-  transition: background .5s;
+  transition: background-color .5s;
 
   pointer-events: none;
-
-
 }
 
 #faqBg.enabled{
-  background: rgba(0,0,0,0.9);
+  background-color: rgba(0,0,0,0.9);
   pointer-events: all;
-
 }
 
 #faq{
@@ -42,7 +37,7 @@
 }
 
 #faq.enabled{
-  top: 2vh;
+  top: 0px;
   opacity: 1;
 }
 
@@ -55,7 +50,7 @@
   text-transform: uppercase;
 
 
-  margin: 15px 0 10px 0;
+  margin: 0 0 20px 0;
 
   color: white;
 }
@@ -64,21 +59,16 @@
   overflow-y: scroll;
 
   height: calc(80vh - 50px);
-  margin: 0;
 
   background: white;
 
-}
-
-
-#faq ul{
   padding: 0;
   letter-spacing: 1px;
 
   box-shadow: 3px 3px 5px #AAA;
 
   border: 5px solid #FFF;
-  border-radius: 15px;
+  border-radius: 1px;
 
 }
 
@@ -88,11 +78,9 @@
 
 
 #faq ul li h3 {
-  font-family: 'Pathway Gothic One', sans-serif;
   font-size: 175%;
   font-weight: normal;
   margin: 0;
-
   line-height: 45px;
 
   padding: 0 5px;
@@ -141,7 +129,6 @@
 }
 
 #faqClose{
-  font-family: 'Pathway Gothic One', sans-serif;
   text-align: center;
   letter-spacing: 1px;
   font-size: 150%;

@@ -1,57 +1,28 @@
-
-
 footer{
   background: #444;
   height: 100px;
   width: 100%;
-  position: absolute;
-  /*left: 0;*/
+  color: white;
+}
 
-  /*padding-left: 5%;*/
-
-  margin: 0 auto;
+footer h2, footer h3{
+  text-align: center;
+  float: left;
+  width: 33%;
 }
 
 footer h2{
-  color: white;
-  font-family: 'Pathway Gothic One', sans-serif;
-
-  /*background: red;*/
-
-  text-align: right;
-
   font-size: 250%;
-  /*margin: 0 5% 0 0;*/
-  margin: 0 1em;
-
-  line-height: 100px;
-  float: left;
-  width: 30%;
+  margin: 30px 0 0 0;
 }
 
 footer h3{
-  float: left;
-  text-align: center;
-
-  /*background: green;*/
-
-
-  height: 100px;
-  width: 25%;
-  margin: 0;
-  padding: 0;
-
-  line-height: 100px;
-}
-
-footer h3:last-of-type{
-  /*background: blue;*/
+  margin: 35px 0 0 0;
 }
 
 
 footer a{
   color: white;
-  font-family: 'Pathway Gothic One', sans-serif;
   letter-spacing: 2px;
   text-decoration: none;
 
@@ -61,44 +32,4 @@ footer a{
 
 footer a:hover{
   font-style: italic;
-}
-
-@media screen and (max-width: 1150px) {
-  footer h2{
-    font-size: 175%;
-  }
-
-  footer h3{
-    font-size: 100%;
-  }
-}
-
-@media screen and (min-width: 800px){
-  .smallFooter{
-    display: none;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  footer h2:not(.smallFooter), footer h3{
-    display: none;
-  }
-
-  .smallFooter{
-    display: block;
-    width: 100%;
-    text-align: center;
-
-    margin: 0;
-    padding: 0;
-  }
-
-  .smallFooter a{
-    margin: 0 10px;
-  }
-
-  .smallFooter, .smallFooter a{
-    font-size: calc(3vw + 2px);
-    font-weight: bold;
-  }
 }

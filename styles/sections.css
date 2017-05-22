@@ -1,7 +1,6 @@
 
 section{
-  clear: both;
-  margin: 1vw auto 50px auto;
+  margin: 40px auto;
 
   width: 90%;
 }
@@ -12,35 +11,31 @@ section{
   height: 300px;
 
   text-align: center;
-  margin-bottom: 20px;
 
   border: 1px solid #666;
+
+  color: white;
+  text-shadow: black 0 0 20px;
 
 }
 
 .pSection h2{
   background: rgba(0,0,0,0.2);
-  color: white;
-  text-shadow: black 0 0 20px;
   line-height: 50px;
   font-size: 200%;
 
-  font-family: 'Pathway Gothic One', sans-serif;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  font-weight: normal;
+
 }
 
 .pSection p{
   background: rgba(0,0,0,0.12);
-  color: white;
-  text-shadow: black 0 0 20px;
 
   height: 150px;
   font-size: 175%;
   padding: 20px 5px 0 5px;
-  /*font-family: 'Pathway Gothic One', sans-serif;*/
-
-
 }
 
 .pSection .bg{
@@ -62,24 +57,9 @@ section{
 
 }
 
-@media screen and (max-width: 900px) {
-  .pSection h2{
-    font-size: 160%;
-    letter-spacing: 2px;
-  }
-
-  .pSection p{
-    font-size: 150%;
-  }
+#welcomeText{
+  margin-top: 10px;
 }
-
-@media screen and (max-width: 575px) {
-  body{
-    width: 100%;
-    max-width: 100% !important;
-  }
-}
-
 
 #welcomeText .bg{
   background-image: url("../images/forest.jpg");
@@ -91,10 +71,6 @@ section{
   background-image: url("../images/money.jpg");
   background-position: top;
 }
-
-/*#cost *{*/
-  /*color: black !important;*/
-/*}*/
 
 #applications .bg{
   background-image: url("../images/table.jpg");
@@ -108,37 +84,15 @@ section{
 #applications ul{
   list-style-type: none;
   list-style-position: outside;
+
+  margin-top: 30px;
+  padding: 0;
 }
 
 #applications a{
   color: #FFF;
   text-decoration: none;
-
   font-size: 200%;
-
-  font-family: 'Pathway Gothic One', sans-serif;
-
-
-}
-
-#applications h2{
-  background: rgba(0,0,0,0.12);
-  font-size: 200%;
-  margin: 20px 0;
-  font-family: 'Pathway Gothic One', sans-serif;
-  text-align: center;
-  color: white;
-  font-weight: normal;
-  padding-bottom: 2px;
-
-  /*border-top: 2px dotted gray;*/
-  /*border-bottom: 2px dotted gray;*/
-
-}
-
-#applications ul{
-  padding: 0;
-
 }
 
 #applications li{
@@ -148,7 +102,6 @@ section{
   text-align: center;
 
   float: left;
-  color: #555;
 
   background-color: rgba(0,0,0,0.2);
   transition: background-color .2s;

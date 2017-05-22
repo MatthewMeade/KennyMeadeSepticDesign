@@ -1,7 +1,7 @@
 var images = document.querySelectorAll(".pSection .bg");
 var largeHeader = document.querySelector("#largeHeader");
 var smallHeader = document.querySelector("#smallHeader");
-var background = document.querySelector("#pageBackground");
+// var background = document.querySelector("#pageBackground");
 var pOff = 400;
 
 window.addEventListener("scroll", update);
@@ -31,5 +31,5 @@ function update(){
     }
   });
 
-  background.style.top = (pos / 1.5) - 300 + "px";
+  // background.style.top = (pos / 1.5) - 300 + "px";
 }
