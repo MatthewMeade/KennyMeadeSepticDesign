@@ -18,7 +18,8 @@ body:after{
   clear: both;
 }
 
-header{
+
+#largeHeader{
   z-index: 10;
 
   background: white;
@@ -30,9 +31,17 @@ header{
   padding: 0;
   margin: 0;
 
+  top: 0;
+
+  transition: top 0.5s linear;
 }
 
-header h1{
+#largeHeader.disabled{
+  top: -200px;
+}
+
+
+#largeHeader h1{
   font-family: 'Pathway Gothic One', sans-serif;
   text-transform: uppercase;
 
@@ -45,16 +54,16 @@ header h1{
 }
 
 @media screen and (max-width: 1200px) {
-  header:not(.mini) #topBar span{
+  #topBar span{
     width: calc(33% - 29px) !important;
   }
 
-  header:not(.mini) #topBar span:nth-child(2){
+  #topBar span:nth-child(2){
     width: 33% !important;
     /*background: red;*/
   }
 
-  header:not(.mini) #topBar{
+  #topBar{
     width: 95vw;
     /*border-left: 1px solid red;*/
     /*border-right: 1px solid red;*/
@@ -64,95 +73,21 @@ header h1{
 
 }
 
-@media screen and (max-width: 1000px) {
-  header.mini #topBar span{
-    width: calc(33% - 29px) !important;
-  }
 
-  header.mini #topBar span:nth-child(2){
-    width: 33% !important;
-  }
-  header #topBar{
-    display: none;
-  }
-}
-
-header.mini h1{
-  animation-name: header;
-  animation-duration: 0.5s;
-}
-
-
-header.mini h1 span{
-  display: inline;
-  /*animation-name: headerSpan;*/
-  /*animation-duration: 0.5s;*/
-}
-
-header.mini h1 #septicDesign, header.mini h1 #kennyMeade{
-  font-size: 150%;
-}
-
-header.mini #topBar{
-  max-width: 95vw;
-  margin: 0 auto;
-}
-
-header.mini{
-  position: fixed;
-  width: 100%;
-  background: white;
-  top: 0;
-  left: 0;
-}
-
-#headSpacer{
-  height: 0;
-  width: 100vw;
-  padding: 0;
-  margin: 0;
-  background: white;
-}
-
-#headSpacer.enabled{
-  height: 175px;
-}
 
 header h1 span{
   display: block;
 }
 
-header.mini #septicDesign::before, header.mini #septicDesign::after{
-  content: "";
-}
-
-@keyframes headerSpan{
-  from{
-    display: block;
-  }
-
-  to{
-    display: inline;
-  }
-}
-
-@keyframes header{
-  0%{
-    top: -75px;
-  }
-
-  100%{
-    top: 0;
-  }
-}
 
 
 
-#kennyMeade{
+
+#largeHeader .kennyMeade{
   font-size: 200%;
 }
 
-#septicDesign{
+#largeHeader .septicDesign{
   font-weight: normal;
   color: #aaa;
 
@@ -160,7 +95,7 @@ header.mini #septicDesign::before, header.mini #septicDesign::after{
   margin-top: -10px;
 }
 
-#septicDesign::before, #septicDesign::after{
+#largeHeader .septicDesign::before, #largeHeader .septicDesign::after{
   content: "—";
 }
 
@@ -219,6 +154,82 @@ header.mini #septicDesign::before, header.mini #septicDesign::after{
 #topBar a:hover{
   font-style: italic;
 }
+
+
+#smallHeader{
+  position: fixed;
+  top: -200px;
+
+
+  font-family: 'Pathway Gothic One', sans-serif;
+  background: white;
+  padding: 5px;
+
+  z-index: 10;
+
+  width: 100%;
+
+  height: 40px;
+
+  transition: top 0.5s linear;
+}
+
+#smallHeader.enabled{
+  top: 0;
+}
+
+
+#smallHeader h1{
+  margin: 0 45px 0 60px;
+
+  line-height: 40px;
+  display: inline;
+
+}
+
+#smallHeader .septicDesign{
+  color: #aaa;
+}
+
+#smallHeader span{
+  display: inline;
+  margin: 0;
+}
+
+
+
+#smallHeader h2{
+  display: inline;
+  line-height: 40px;
+
+  font-weight: normal;
+  font-family: 'Pathway Gothic One', sans-serif;
+
+
+}
+
+#smallHeader i{
+  line-height: 50px;
+
+  font-size: 25px;
+
+  margin-left: 100px;
+}
+
+
+#smallHeader a{
+  color: #444;
+  line-height: 40px;
+  text-decoration: none;
+
+  font-size: 20px;
+
+  /*margin-right: 60px;*/
+}
+
+
+
+
 
 section{
   clear: both;
@@ -305,6 +316,7 @@ section{
 #welcomeText .bg{
   background-image: url("images/forest.jpg");
   background-position: top;
+  background-size: cover;
 }
 
 #cost .bg{
