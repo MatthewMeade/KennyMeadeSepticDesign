@@ -111,3 +111,52 @@ section{
 #applications li:hover{
   background-color: rgba(0,0,0,0.4);
 }
+
+@media screen and (min-width: 1200px){
+  .pSection:not(#applications){
+    width: 65%;
+    margin: 30px 4%;
+  }
+
+
+  .pSection:not(#applications)+i{
+    font-size: 250px;
+    display: block;
+    width: 25%;
+    margin-top: 45px;
+    color: #000;
+    opacity: 0.4;
+    text-shadow: 15px 15px 15px #AAA;
+  }
+
+  .pSection:not(#applications) p, .pSection:not(#applications) h2{
+    padding: 0 30px;
+  }
+
+
+
+  #welcomeText{
+    float: left;
+    text-align: left;
+  }
+
+  #welcomeText+i{
+    float: right;
+    text-align: left;
+  }
+
+  #cost{
+    float: right;
+
+    text-align: right;
+  }
+
+  #cost+i{
+    float: left;
+    text-align: right;
+  }
+
+
+
+
+}
