@@ -20,22 +20,18 @@ section{
 }
 
 .pSection h2{
-  background: rgba(0,0,0,0.2);
   line-height: 50px;
-  font-size: 200%;
+  font-size: 225%;
+  text-align: center;
 
-  letter-spacing: 0.2em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  font-weight: normal;
 
 }
 
 .pSection p{
-  background: rgba(0,0,0,0.12);
-
-  height: 150px;
-  font-size: 175%;
-  padding: 20px 5px 0 5px;
+  font-size: 250%;
+  text-align: center;
 }
 
 .pSection .bg{
@@ -53,7 +49,7 @@ section{
   z-index: -1;
 
   transition: top .05s linear;
-  filter: brightness(50%) grayscale(15%);
+  filter: brightness(75%);
 
 }
 
@@ -62,14 +58,14 @@ section{
 }
 
 #welcomeText .bg{
-  background-image: url("../images/forest.jpg");
-  background-position: top;
+  background-image: url("../images/NL.png");
+  background-position: top center;
   background-size: cover;
 }
 
 #cost .bg{
-  background-image: url("../images/money.jpg");
-  background-position: top;
+  background-image: url("../images/cabin.jpg");
+  background-position: bottom;
 }
 
 #applications .bg{
@@ -124,8 +120,8 @@ section{
     display: block;
     width: 25%;
     margin-top: 45px;
-    color: #000;
-    opacity: 0.4;
+    color: #999;
+    /*opacity: 0.4;*/
     text-shadow: 15px 15px 15px #AAA;
   }
 

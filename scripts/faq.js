@@ -1,5 +1,5 @@
 var questions = document.querySelector("#faq ul");
-var background = document.querySelector("#faqBg");
+var faqBackground = document.querySelector("#faqBg");
 var faqWindow = document.querySelector("#faq");
 
 (function(){
@@ -17,7 +17,7 @@ var faqWindow = document.querySelector("#faq");
 })();
 
 (function () {
-    background.addEventListener("click", function(){
+    faqBackground.addEventListener("click", function(){
        toggleWindow(false);
     });
 
@@ -29,6 +29,6 @@ var faqWindow = document.querySelector("#faq");
 
 function toggleWindow(mode){
     document.body.style.overflow = mode ? "hidden" : "";
-    background.className = mode ? "enabled" : "";
+    faqBackground.className = mode ? "enabled" : "";
     faqWindow.className = mode ? "enabled" : "";
 }
