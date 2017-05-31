@@ -3,12 +3,15 @@ header{
 }
 
 #largeHeader{
-  background: rgba(255,255,255, 0.7);
+  /*background: rgba(255,255,255, 1);*/
+  background-image: url("../images/chalkboard.jpg");
+  color: white;
 }
 
 #largeHeader h1{
   text-align: center;
   margin: 0;
+  color: white;
 }
 
 #largeHeader h1 span{
@@ -26,6 +29,7 @@ header{
 
   font-size: 120%;
   margin-top: -10px;
+
 }
 
 .septicDesign{
@@ -38,8 +42,8 @@ header{
 
 
 #topBar{
-  border-top: 2px solid #BBB;
-  border-bottom: 2px solid #BBB;
+  /*border-top: 2px solid #BBB;*/
+  border-bottom: 2px solid #FFF;
 
   letter-spacing: 2px;
 
@@ -47,7 +51,6 @@ header{
 
   font-size: 120%;
 
-  color: #666;
 
 }
 

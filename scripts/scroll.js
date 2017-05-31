@@ -2,7 +2,7 @@ var images = document.querySelectorAll(".pSection .bg");
 var largeHeader = document.querySelector("#largeHeader");
 var smallHeader = document.querySelector("#smallHeader");
 var background = document.querySelector("#pageBackground");
-var icons = document.querySelectorAll(".pSection+i");
+// var icons = document.querySelectorAll(".pSection+i");
 var pOff = 250;
 
 window.addEventListener("scroll", update);
@@ -32,17 +32,20 @@ function update(){
   images.forEach(function(elem, i){
     var top = elem.parentElement.getBoundingClientRect().top;
 
-    if(top < pOff){
-      elem.style.top = -1 * ((pos + pOff) - (top + pos)) + 'px';
-    }
+    // if(top < pOff){
+    //   elem.style.top = -1 * ((pos + pOff) - (top + pos)) + 'px';
+    // }
+
+    elem.style.top = -pos * 0.75 + 'px';
+
   });
 
-  var top0 = icons[0].getBoundingClientRect().top;
-  icons[0].style.textShadow = `15px ${Math.min(top0 / 20, 25)}px 10px #BBB`;
-
-
-  var top1 = icons[1].getBoundingClientRect().top - 200;
-  icons[1].style.textShadow = `15px ${Math.min(top1 / 20, 25)}px 10px #BBB`;
+  // var top0 = icons[0].getBoundingClientRect().top;
+  // icons[0].style.textShadow = `5px ${Math.min(top0 / 25, 25)}px 25px #BBB`;
+  //
+  //
+  // var top1 = icons[1].getBoundingClientRect().top - 200;
+  // icons[1].style.textShadow = `5px ${Math.min(top1 / 25, 25)}px 25px #BBB`;
 
   var newBPos = "";
   bgStart.forEach(e=>{
@@ -51,7 +54,7 @@ function update(){
 
   newBPos = newBPos.slice(0, newBPos.length - 1)
 
-  console.log(newBPos);
+  // console.log(newBPos);
 
   background.style.backgroundPosition = newBPos;
 }

@@ -12,7 +12,6 @@ section{
 
   text-align: center;
 
-  border: 1px solid #666;
 
   color: white;
   text-shadow: black 0 0 20px;
@@ -44,12 +43,12 @@ section{
   background-repeat: repeat-y;
   background-size: contain;
 
-
-  opacity: 75;
   z-index: -1;
 
   transition: top .05s linear;
-  filter: brightness(75%);
+  /*filter: brightness(75%);*/
+
+
 
 }
 
@@ -64,8 +63,8 @@ section{
 }
 
 #cost .bg{
-  background-image: url("../images/cabin.jpg");
-  background-position: bottom;
+  background-image: url("../images/road.jpg");
+  background-position: top;
 }
 
 #applications .bg{
@@ -120,9 +119,9 @@ section{
     display: block;
     width: 25%;
     margin-top: 45px;
-    color: #999;
-    /*opacity: 0.4;*/
-    text-shadow: 15px 15px 15px #AAA;
+    color: #FFF;
+    opacity: 0.75;
+    /*text-shadow: 5px 5px 5px #FFF;*/
   }
 
   .pSection:not(#applications) p, .pSection:not(#applications) h2{
