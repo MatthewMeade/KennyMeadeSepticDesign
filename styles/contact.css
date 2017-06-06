@@ -1,6 +1,6 @@
 
 #contact {
-  background: #444;
+  background: rgba(0,0,0,0.1);
 
   padding: 20px 0;
 
@@ -120,10 +120,10 @@
   display: block;
   margin: 0 auto;
 
-  border: 2px #444 solid;
-  background: white;
+  border: none;
+  background: none;
 
-  color: #444;
+  color: #FFF;
 
   font-family: 'Pathway Gothic One', sans-serif;
   letter-spacing: 2px;
@@ -133,19 +133,18 @@
   padding: 0;
 
 
-  transition: top .2s, width .2s;
+  transition: color .2s
 
-  outline: none;
+  /*outline: none;*/
   position: relative;
   top: 0;
-
-  width: 300px !important;
+  /*font-weight: bold;*/
+  text-transform: uppercase;
 
 }
 
 #submitButton:focus, #submitButton:hover, #faqButton:focus, #faqButton:hover{
-  top: 3px;
-  width: 290px !important;
+  color: #AAA;
 }
 
 #submitButton[value="Sending..."]{
@@ -154,4 +153,68 @@
 
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+@media screen and (max-width: 1800px){
+ #contact{
+    width: 100%;
+  }
+}
+
+
+#smallButtons{
+  display: none;
+}
+
+@media screen and (max-width: 1000px){
+  #contact form div{
+    display: block;
+    width: 100%;
+    float: none;
+  }
+
+  #largeButtons{
+    display: none;
+  }
+
+  #smallButtons{
+    display: inline;
+  }
+
+  #contactInfo{
+    height: 200px !important;
+    /*margin: 20px auto;*/
+  }
+
+  #contactInfo input{
+    width: 93%;
+  }
+
+  #contactInfo label{
+    width: 5%;
+    text-align: left;
+    position: relative;
+    left: -5px;
+  }
+
+  #message{
+    height: 150px;
+    width: 100%;
+    float: left;
+    margin-top: -20px;
+
+    height: 150px;
+  }
+
+  #contactMessage label{
+    position: relative;
+    top: 27px;
+    color: black;
+    text-align: right;
+  }
+
+  #contactMessage{
+    height: 200px !important;
+  }
+
 }

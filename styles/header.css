@@ -84,7 +84,7 @@ header a:hover{
   position: fixed;
   top: -200px;
 
-  background: white;
+  background: rgba(0,0,0,0.75);
   padding: 5px;
 
   z-index: 10;
@@ -94,6 +94,8 @@ header a:hover{
   height: 40px;
 
   transition: top 0.5s;
+
+  color: white;
 }
 
 #smallHeader.enabled{
@@ -128,11 +130,108 @@ header a:hover{
 
 
 #smallHeader a{
-  color: #444;
+  color: #FFF;
   text-decoration: none;
 
   font-size: 20px;
 
   position: relative;
   top: -2px;
+}
+
+@media screen and (max-width: 1200px){
+  #smallHeader i{
+    margin: 0 0 0 3vw !important;
+  }
+
+  #smallHeader h1{
+    margin: 0 15px;
+  }
+
+  #smallHeader>span:first-of-type{
+    font-size: 90%;
+  }
+
+  #smallHeader>span:nth-last-of-type(-n+2){
+    /*float: right;*/
+    margin: 7px 25px 0 0;
+  }
+
+
+}
+
+@media screen and (max-width: 980px){
+  #largeHeader{
+    height: 120px;
+  }
+
+  #largeHeader:after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  #largeHeader h1{
+    width: 50%;
+    float: left;
+  }
+  #topBar{
+    width: 50%;
+    float: right;
+    border: none;
+
+    padding-top: 20px;
+  }
+
+  #topBar span{
+    display: block;
+    width: 100%;
+    text-align: center !important;
+
+    height: 30px;
+  }
+
+  #smallHeader{
+    height: 75px;
+  }
+
+  #smallHeader>span:first-of-type{
+    display: block;
+    width: 40%;
+    margin-left: 22.5px;
+    width: 50%;
+  }
+
+  #smallHeader>span:nth-last-of-type(-n+2){
+    float: right;
+
+    position: relative;
+    top: -50px;
+    left: -40px;
+
+    /*background: red;*/
+
+  }
+
+  #smallHeader>span:nth-last-of-type(-n+2) a, #smallHeader>span:nth-last-of-type(-n+2) i {
+    font-size: 3vw;
+  }
+
+}
+/*
+@media screen and (max-width: 768px){
+  #smallHeader{
+    height: 65px;
+  }
+
+  #smallHeader h1{
+    font-size: calc(5vw);
+    line-height: 65px;
+    float: left;
+    /*width: 60%;*/
+  }
+/*
+  #smallHeader>span:nth-last-of-type(-n+2){
+    font-size: 3vw;
+  }
 }

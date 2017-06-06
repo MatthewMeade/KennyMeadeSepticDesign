@@ -8,6 +8,7 @@ elem.style.padding = "5px";
 elem.style.zIndex = 1000;
 elem.style.fontFamily = "monospace";
 elem.style.opacity = 0.5;
+elem.style.color = "white";
 
 
 elem.innerHTML = `${window.innerWidth} x ${window.innerHeight}`;
