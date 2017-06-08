@@ -6,6 +6,8 @@ header{
   /*background: rgba(255,255,255, 1);*/
   background-image: url("../images/chalkboard.jpg");
   color: white;
+
+  margin-bottom: 20px;
 }
 
 #largeHeader h1{
@@ -214,24 +216,85 @@ header a:hover{
   }
 
   #smallHeader>span:nth-last-of-type(-n+2) a, #smallHeader>span:nth-last-of-type(-n+2) i {
-    font-size: 3vw;
+    /*font-size: 3vw;*/
   }
 
 }
-/*
-@media screen and (max-width: 768px){
+
+@media screen and (max-width: 800px){
+
   #smallHeader{
-    height: 65px;
+    height: auto;
+  }
+
+  #smallHeader h1, #smallHeader>span:first-of-type{
+    width: 100% !important;
+    display: block;
+    text-align: center;
+  }
+
+  #smallHeader>span:nth-last-of-type(-n+2){
+    float: left;
+    margin: 0;
+    position: static;
+    /*background-color: red;*/
+    display: block;
+    width: 50% !important;
+    text-align: left;
+  }
+
+  #smallHeader .phone{
+    text-align: right !important;
+  }
+
+  #smallHeader .phone a{
+    word-spacing: 7px;
+    letter-spacing: 2px;
+  }
+
+}
+
+@media screen and (max-width: 600px){
+
+  #largeHeader{
+    height: auto !important;
+  }
+  #largeHeader h1, #topBar{
+    width: 100%;
+  }
+
+  #largeHeader .kennyMeade, #largeHeader .septicDesign{
+    display: inline !important;
+    font-size: 6vw !important;
+  }
+
+  .septicDesign::before, .septicDesign::after{
+    content: "" !important;
+  }
+
+  #topBar{
+    font-size: 4vw !important;
+    padding: 1vw;
+  }
+``
+  #topBar span{
+    margin: 0 !important;
+    height: auto;
   }
 
   #smallHeader h1{
-    font-size: calc(5vw);
-    line-height: 65px;
-    float: left;
-    /*width: 60%;*/
+    margin: 0;
   }
-/*
+
+  #smallHeader>span{
+    margin: 0 !important;
+    width: 100%;
+  }
+  #smallHeader h2{
+    width: 100%;
+  }
+
   #smallHeader>span:nth-last-of-type(-n+2){
-    font-size: 3vw;
+    display: none;
   }
 }

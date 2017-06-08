@@ -93,14 +93,29 @@
   text-indent: 5px;
 }
 
-#contactInfo h3, #contactMessage label{
+#contactInfo h3,   #contactMessage label{
   font-size: 250%;
   text-align: center;
   font-weight: normal;
   display: block;
   margin: 0;
+  color: #666;
+}
 
-  color: white;
+@media screen and (min-width: 1000px){
+  #contactMessage label{
+    text-align: center;
+    display: block;
+    width: 90%;
+    /*background: rgba(75,75,75,0.75);*/
+    margin: 0 auto;
+    line-height: 75px;
+    font-size: 300%;
+    position: relative;
+    top: 63%;
+
+    margin-bottom: -50px;
+  }
 }
 
 
@@ -199,17 +214,18 @@ input:-webkit-autofill {
 
   #message{
     height: 150px;
-    width: 100%;
+    width: calc(100% - 10px);
+
     float: left;
-    margin-top: -20px;
+    /*margin-top: -20px;*/
 
     height: 150px;
   }
 
   #contactMessage label{
     position: relative;
-    top: 27px;
-    color: black;
+    top: 50px;
+    /*color: black;*/
     text-align: right;
   }
 
@@ -217,4 +233,51 @@ input:-webkit-autofill {
     height: 200px !important;
   }
 
+}
+
+@media screen and (max-width: 750px){
+
+  #contactForm{
+    padding: 0;
+  }
+  #contactInfo input{
+    width: 100%;
+    margin-bottom: 0;
+  }
+  #contactInfo{
+    padding: 0;
+  }
+
+  #contactInfo label{
+    position: relative;
+    left: 95%;
+    top: 20px;
+    font-size: 120%;
+    z-index: 1;
+    color: #666;
+  }
+}
+
+@media screen and (max-width: 500px){
+  #contactForm{
+    width: 90% !important;
+  }
+
+  #message{
+    margin-top: -20px;
+  }
+}
+
+@media screen and (max-width: 400px){
+  #contactInfo label, #contactMessage label{
+    display: none;
+  }
+
+  #contactInfo input{
+    margin: 10px auto;
+  }
+
+  #message{
+    margin: 0 auto;
+  }
 }

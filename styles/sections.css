@@ -151,7 +151,48 @@ section{
     text-align: right;
   }
 
+}
+
+
+@media screen and (max-width: 900px){
+  .pSection{
+    width: 100%;
+    margin: 10px auto;
+
+    height: 225px;
+
+    margin-top: 30px;
+  }
+}
 
 
 
+@media screen and (max-width: 750px){
+  .pSection{
+    font-size: 80%;
+    /*padding: 2vw;*/
+  }
+
+  #applications{
+    padding: 0;
+  }
+
+  #applications h2{
+    margin: 0 0 -25px 0;
+  }
+
+  #applications li{
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+
+}
+
+@media screen and (max-width: 500px){
+
+  .pSection{
+    font-size: 65%;
+    padding: 0;
+  }
 }
