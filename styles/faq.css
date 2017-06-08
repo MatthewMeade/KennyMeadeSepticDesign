@@ -36,6 +36,29 @@
   opacity: 0;
 }
 
+@media screen and (max-width: 1250px) and (min-width: 950px){
+  #faq{
+    width: 90vw;
+    left: 4vw;
+  }
+}
+
+@media screen and (max-width: 950px){
+  #faq{
+    width: 95vw;
+    left: 1vw;
+  }
+
+  #faq h3{
+    font-size: 4vw !important;
+    line-height: 5vw !important;
+  }
+
+  #faq ul li p{
+    font-size: 2vw !important;
+  }
+}
+
 #faq.enabled{
   top: 0px;
   opacity: 1;

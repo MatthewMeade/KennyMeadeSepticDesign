@@ -15,6 +15,6 @@ elem.innerHTML = `${window.innerWidth} x ${window.innerHeight}`;
 
 document.body.insertBefore(elem,  document.body.firstChild);
 
-window.addEventListener("resize", function(e) => {
+window.addEventListener("resize", function(e){
   elem.innerHTML = `${window.innerWidth} x ${window.innerHeight}`
 });
