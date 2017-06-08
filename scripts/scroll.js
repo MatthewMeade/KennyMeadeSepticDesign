@@ -8,7 +8,7 @@ var pOff = 250;
 window.addEventListener("scroll", update);
 
 var bgStart = [];
-background.style.backgroundPosition.split(",").forEach(e=>{
+background.style.backgroundPosition.split(",").forEach(function(e){
  bgStart.push([parseInt(e), parseInt(e.slice(-4))]);
 });
 
@@ -29,16 +29,17 @@ function update(){
   }
 
 
-  images.forEach(function(elem, i){
-    var top = elem.parentElement.getBoundingClientRect().top;
+  ///images.forEach(function(elem, i){ IE, please stop
+  for(var i = 0; i < images.length; i++){
+    var top = images[i].parentElement.getBoundingClientRect().top;
 
     // if(top < pOff){
     //   elem.style.top = -1 * ((pos + pOff) - (top + pos)) + 'px';
     // }
 
-    elem.style.top = -pos * 0.75 + 'px';
+    images[i].style.top = -pos * 0.75 + 'px';
 
-  });
+  };
 
   // var top0 = icons[0].getBoundingClientRect().top;
   // icons[0].style.textShadow = `5px ${Math.min(top0 / 25, 25)}px 25px #BBB`;
@@ -48,8 +49,9 @@ function update(){
   // icons[1].style.textShadow = `5px ${Math.min(top1 / 25, 25)}px 25px #BBB`;
 
   var newBPos = "";
-  bgStart.forEach(e=>{
-    newBPos += `${e[0]}% ${e[1] + (pos / 30)}%,`;
+  bgStart.forEach(function(e){
+    // newBPos += `${e[0]}% ${e[1] + (pos / 30)}%,`;  Stupid IE...
+    newBPos += e[0]+"% "+e[1] + (pos / 30)+"%,";
   });
 
   newBPos = newBPos.slice(0, newBPos.length - 1)
