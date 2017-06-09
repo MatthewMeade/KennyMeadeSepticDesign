@@ -299,3 +299,13 @@ header a:hover{
     display: none;
   }
 }
+
+@media screen and (max-width: 350px){
+  #smallHeader h1{
+    font-size: 150%;
+  }
+
+  #smallHeader h2{
+    font-size: 125%;
+  }
+}

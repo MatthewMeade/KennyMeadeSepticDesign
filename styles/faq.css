@@ -65,6 +65,10 @@
   #faq ul li p{
     font-size: 4vw !important;
   }
+
+  #faq h2{
+    font-size: 6vw !important;
+  }
 }
 
 #faq.enabled{
