@@ -49,13 +49,21 @@
     left: 1vw;
   }
 
+
+
+  #faqClose{
+    top: -20px !important;
+  }
+}
+
+@media screen and (max-width: 650px){
   #faq h3{
-    font-size: 4vw !important;
-    line-height: 5vw !important;
+    font-size: 5vw !important;
+    line-height: 7vw !important;
   }
 
   #faq ul li p{
-    font-size: 2vw !important;
+    font-size: 4vw !important;
   }
 }
 

@@ -63,8 +63,29 @@ section{
 }
 
 #cost .bg{
-  background-image: url("../images/road.jpg");
-  background-position: top;
+  background-image: url("../images/puffin.jpg");
+  background-position: 0 -10vw;
+  background-size: 210%;
+
+  background-repeat: no-repeat;
+
+  border-top: transparent;
+  background-clip: border-box;
+}
+
+@media screen and (max-width: 500px){
+  #cost .bg{
+    height: 600px;
+    background-size: cover;
+    /*background-position: top left;*/
+  }
+}
+
+@media screen and (max-width: 430px){
+  #cost .bg{
+    height: 750px;
+    background-position: 30% top;
+  }
 }
 
 #applications .bg{
@@ -195,8 +216,22 @@ section{
 
 @media screen and (max-width: 500px){
 
-  .pSection{
-    font-size: 65%;
+  .pSection:not(#applications){
+    font-size: 50%;
     padding: 0;
+  }
+
+  .pSection h2:not(#applications h2){
+    line-height: normal;
+    margin-top: 20%;
+  }
+
+
+
+}
+
+@media screen and (max-width: 400px){
+  #applications h2{
+    font-size: 21px;
   }
 }

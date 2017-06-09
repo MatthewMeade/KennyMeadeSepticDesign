@@ -94,11 +94,12 @@
 }
 
 #contactInfo h3,   #contactMessage label{
-  font-size: 250%;
+  font-size: 225%;
   text-align: center;
   font-weight: normal;
   display: block;
-  margin: 0;
+  margin: 10px 0 0 0;
+  /*display: none;*/
   color: #666;
 }
 
@@ -256,6 +257,11 @@ input:-webkit-autofill {
     z-index: 1;
     color: #666;
   }
+
+  #contactInfo h3{
+    position: relative;
+    /*top: 8px;*/
+  }
 }
 
 @media screen and (max-width: 500px){
@@ -269,8 +275,12 @@ input:-webkit-autofill {
 }
 
 @media screen and (max-width: 400px){
-  #contactInfo label, #contactMessage label{
-    display: none;
+  #contactInfo label, #contactInfo i{
+    /*display: none;*/
+    top: auto;
+    margin-top: 5px;
+    right: 20px;
+    position: absolute;
   }
 
   #contactInfo input{
@@ -278,6 +288,10 @@ input:-webkit-autofill {
   }
 
   #message{
-    margin: 0 auto;
+    margin: -50px auto 0 auto;
+  }
+
+  #contactMessage{
+    height: auto !important;
   }
 }

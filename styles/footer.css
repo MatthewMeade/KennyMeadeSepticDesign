@@ -35,12 +35,19 @@ footer a:hover{
 }
 
 @media screen and (max-width: 900px) {
+
+  footer{
+    height: auto;
+  }
+
   footer h2, footer h3{
     width: 100%;
     float: none;
     margin: 10px 0;
 
-    font-size: 4vw;
+    font-size: 16px;
+    /*line-height: normal;
+    height: auto;*/
   }
 
 }
