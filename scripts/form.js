@@ -20,7 +20,7 @@ function OnFormSubmit(event){
   toggleHeader();
 
   var http = new XMLHttpRequest();
-  var url = "https://formspree.io/mafumeade@gmail.com";
+  var url = "https://formspree.io/kennydmeade@gmail.com";
 
   subjectInput.value += nameInput.value;
 
