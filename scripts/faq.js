@@ -4,12 +4,12 @@ var faqWindow = document.querySelector("#faq");
 
 (function(){
     questions.addEventListener("click", function(e){
-       if(e.srcElement.tagName === "H3"){
+       if(e.target.tagName === "H3"){
 
            var s = document.querySelector("li.active");
            if(s) s.className = "";
 
-           var parent = e.srcElement.parentNode;
+           var parent = e.target.parentNode;
            parent.className = parent.className === "active" ? "" : "active";
 
        }
