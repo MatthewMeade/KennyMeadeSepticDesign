@@ -51,7 +51,7 @@ function update(){
   var newBPos = "";
   bgStart.forEach(function(e){
     // newBPos += `${e[0]}% ${e[1] + (pos / 30)}%,`;  Stupid IE...
-    newBPos += e[0]+"% "+e[1] + (pos / 30)+"%,";
+    newBPos += e[0]+ "% "+ (e[1] + (pos / 20)) +"%,";
   });
 
   newBPos = newBPos.slice(0, newBPos.length - 1)
